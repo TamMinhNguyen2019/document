@@ -1,6 +1,6 @@
 # WTP Business
 
-## ?? **Product Permissions**
+## 🔑 **Product Permissions**
 
 - User is allowed to create unlimited number of products.
 - User is allowed to see other user's product (_but not edit/remove them_).
@@ -12,16 +12,16 @@
 
   | Role       | View | Edit | Delete | Assign Permissions | Transfer Ownership |
   |------------|------|------|--------|--------------------|--------------------|
-  | Owner      | ??    | ??    | ??      | ??                  | ??                  |
-  | Super User | ??    | ??    | ??      | ?                  | ?                  |
-  | Allowed    | ??    | ??    | ?      | ?                  | ?                  |
-  | Denied     | ??    | ?    | ?      | ?                  | ?                  |
-  | Other      | ??    | ?    | ?      | ?                  | ?                  |
+  | Owner      | ✔️    | ✔️    | ✔️      | ✔️                  | ✔️                  |
+  | Super User | ✔️    | ✔️    | ✔️      | ❌                  | ❌                  |
+  | Allowed    | ✔️    | ✔️    | ❌      | ❌                  | ❌                  |
+  | Denied     | ✔️    | ❌    | ❌      | ❌                  | ❌                  |
+  | Other      | ✔️    | ❌    | ❌      | ❌                  | ❌                  |
 
   - `Allowed`: The user that got edit access issued from product owner.
   - `Denied`: The user that got edit access revoked frorm product owner.
   
-## ?? **Chart Permissions**
+## 🔑 **Chart Permissions**
 - A user is allowed to create, edit, and delete its own chart presets.
 - A user can view chart presets of other users in the same company.
 - A user with chart permission is allowed to edit chart presets of other users in the same company.
@@ -31,12 +31,12 @@
 #### Permission Overview:
   | Role       | View | Edit | Delete | 
   |------------|------|------|--------|
-  | Owner      |  ??   | ??    | ??   | 
-  | Super User | ??    | ??    | ??   | 
-  | Allowed    | ??    | ??    | ?   | 
-  | Denied     | ??    | ?    | ?   |
+  | Owner      |  ✔️   | ✔️    | ✔️   | 
+  | Super User | ✔️    | ✔️    | ✔️   | 
+  | Allowed    | ✔️    | ✔️    | ❌   | 
+  | Denied     | ✔️    | ❌    | ❌   |
 
-## ?? **Product Component**
+## 🔑 **Product Component**
 
 - A product can be consider `Completed` if it have enough info:
   - **Name**
@@ -52,20 +52,20 @@
 
 - Commodities data is read-only and got pre-populated by sysadmin
 
-## ?? **Show My Product**
+## 🔑 **Show My Product**
 - Only show products of the current user.
-## ?? **Import Product**
+## 🔑 **Import Product**
 - Users can import many products by using the Import Function.
 - A template can be downloaded to fill in products' information.
-## ?? **Export Product**
+## 🔑 **Export Product**
 - The current user can export all products in the company.
 - The current user can export its filtered products.
-## ?? **Search a Product (Adcanced Search)**
+## 🔑 **Search a Product (Adcanced Search)**
 - Users have the posibility to search products by any characteristic of a products. 
 - Users can erase all the filtering criteria by Clicking on the button **Clear Filter** in the result screen.
 - Users can erase all the filtering criteria by Clicking on the button **Reset** in the advanced search pop up.</br>
 *Please view the backlog item to know more about it.* https://buynamics.visualstudio.com/WTP/_workitems/edit/716
-## ?? **Compare Products**
+## 🔑 **Compare Products**
 - This function offers users the possibility to export to excel and compare multiple products.
 - A compared product must be a [`completed`](#completed) product.</br>
   *Please view the backlog item to know more about it.* https://buynamics.visualstudio.com/WTP/_workitems/edit/3826</br>
@@ -90,16 +90,19 @@ There are 2 ways to use the **Compare/ Export** function:
 - Cost Name
 - % of sale
 - Values based on material costs
-- Values based on buying price
-- Costs/ shakles
-## ?? **Completeness Percentage**
+- Values based on buying price (optional)
+- Costs/ shakles (if available)
+## 🔑 **Completeness Percentage**
 ### Total product completeness in the product list
 - The completeness column in the product grid shows how many percents a product's characteristics are filled.
 - The completeness coulumn showns what information (characteristics) is(are) still missing when users hover on a specific percent of a product in the list.</br>
 - Color of the completeness:
   - Red: if the completeness in the grid is in red, there's no enough info to create a chart. ( Lacking commodity/component with net weight)
   - Black: if the completeness in the grid is in black, there's not enogh info to break down the production cost (industry data) but it's still possible to create a chart.
-  - Green: if the completeness in the grid is in green, it's possible to create a chart and break down the production cost (industry data).
+  - Green: if the completeness in the grid is in green, it's possible to create a chart and break down the production cost (industry data).</br>
+- *Please view the backlog item to know more about it.*</br>
+   - https://buynamics.visualstudio.com/VRS/_workitems/edit/5186
+   - https://buynamics.visualstudio.com/WTP/_workitems/edit/2021
 ### Total product completeness in the product detail page
 - The completeness percentage is the same as the completeness percentage in the product list.
 ### Completeness percent in the product detail section
@@ -136,4 +139,40 @@ For example, if country is filled, the percent of `1. Product detail` is (10/70)
   | Commodity/ component     |  15 %  | 
   | Net Weight    | 15 %  |
 - The percentage formulas: **`(Field (%) / 30 % )*100`**</br>
-For example, if the 
+For example, if a commodity is added and no net weight is input, the percent of `2. Commodity and Component Weights` is (15/30)*100% = 50 %, and the product total completness is 15% (not include country).
+- The color rule for this section: the same as that for the section `1. Product detail`
+## 🔑 **Product Performance**
+- Users have the possiblity to compare existing buying prices with theriotical WTP prices.
+- This fuction not only is for 1 product but also for a bundle of products and follows the difference over time.
+- There are 3 parts in the Product Performance screen, including `1. Date Range and Currency`, `2. Limit Selection of Products`, `3. Procurement Performance: average buying price vs average WTP price`.</br>
+**Filter Section**
+- Date Range and Currency
+  - Date Range: </br>
+     Users can limit the time period they want to see in the performance chart in the X-axsis by selecting **From Date** and **To Date**.</br>
+     From Date <= To Date.</br>
+     Default values: 1 year, counting back from the latest commodity price date.</br>
+     Date range can be limited by the `Product data From` and `Product Data To` in Admin > Manage Users.
+  - Currency:</br>
+     Users can choose the currency for the amount of the `average buying price` and the `average WTP price`.</br>
+     The date of currency rate is the date of the time point.
+- Limit selection of products
+  - Unfinished Product: </br>
+     Include: include `finished` and `unfinished` products.</br>
+     Exclude: exclude `unfinished` products.
+  - Supplier: </br>
+     Users can choose the products of the same supplier.</br>
+     Users can add multi-suppliers.
+  - Tags: </br>
+     Users can choose the products of the same tag.</br>
+     Users can add mlti-tags.
+- Procurement Performance (the performance chart) 
+  - The product performance chart draws 2 lines: **Weighted average buying price and weighted average WTP price**.
+  - The chart compares the annual average buying price with the annual average WTP price at a certain time point; the smaller the distance between the 2 lines is, the better negotiations the buyer makes over tinme.
+  - The number of products compared in the 2 lines at a certain point must be equal.
+  - When hovering on a time pont in the line, users are noticed with 3 information: the specific date, `weighted average buying price/ weighted average WTP cost price`, and `number of compared products`.</br>
+  - Compared products must be a `complete` product with buying prices and annual quantity >0.</br>
+   How to calculate Weighted average buying price and Weighted average WTP cost price?</br>
+   **Weighted average buying price:**</br>
+    It's defined as 
+
+
