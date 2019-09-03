@@ -114,13 +114,15 @@ There are 2 ways to use the **Compare/ Export** function:
   | Industry    | 20 %  | 
   | Supplier    | 5  %  | 
   | Buying Price| 10 % |
-  | Annual Quantity    |    10% |
+  | Annual Quantity| 10% |
   | Tag| 1%|
   | Description| 1%|
   | Article Number| 5%|
   | Article no Supplier|1%|
   | Unit of Measure| 5%|
   | Image| 2%|
+  
+  
 
 - The percentage formulas: **`(Field (%) / 70 % )*100`**</br>
 For example, if country is filled, the percent of `1. Product detail` is (10/70)*100 ~ 14%, and the product total completeness is 10%.
@@ -173,6 +175,6 @@ For example, if a commodity is added and no net weight is input, the percent of 
   - Compared products must be a `complete` product with buying prices and annual quantity >0.</br>
    How to calculate Weighted average buying price and Weighted average WTP cost price?</br>
    **Weighted average buying price:**</br>
-    It's defined as 
+    It's defined as test
 
 
