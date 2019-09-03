@@ -63,13 +63,13 @@
 ## 🔑 **Search a Product (Adcanced Search)**
 - Users have the posibility to search products by any characteristic of a products. 
 - Users can erase all the filtering criteria by Clicking on the button **Clear Filter** in the result screen.
-- Users can erase all the filtering criteria by Clicking on the button **Reset** in the advanced search pop up.</br>
-*Please view the backlog item to know more about it.* https://buynamics.visualstudio.com/WTP/_workitems/edit/716
+- Users can erase all the filtering criteria by Clicking on the button **Reset** in the advanced search pop up.
+- *Please view the backlog item to know more about it.* https://buynamics.visualstudio.com/WTP/_workitems/edit/716
 ## 🔑 **Compare Products**
 - This function offers users the possibility to export to excel and compare multiple products.
-- A compared product must be a [`completed`](#completed) product.</br>
-  *Please view the backlog item to know more about it.* https://buynamics.visualstudio.com/WTP/_workitems/edit/3826</br>
-There are 2 ways to use the **Compare/ Export** function:
+- A compared product must be a [`completed`](#completed) product.
+- *Please view the backlog item to know more about it.* https://buynamics.visualstudio.com/WTP/_workitems/edit/3826
+- There are 2 ways to use the **Compare/ Export** function:
   ### Export From The Product List
 -  Compared product(s) are selected in the product grip before executing `Compared/Export`.
 -  `Include buying price column` button is only visible when buying prices are available in at least one product.
@@ -95,37 +95,35 @@ There are 2 ways to use the **Compare/ Export** function:
 ## 🔑 **Completeness Percentage**
 ### Total product completeness in the product list
 - The completeness column in the product grid shows how many percents a product's characteristics are filled.
-- The completeness coulumn showns what information (characteristics) is(are) still missing when users hover on a specific percent of a product in the list.</br>
+- The completeness coulumn showns what information (characteristics) is(are) still missing when users hover on a specific percent of a product in the list.
 - Color of the completeness:
   - Red: if the completeness in the grid is in red, there's no enough info to create a chart. ( Lacking commodity/component with net weight)
   - Black: if the completeness in the grid is in black, there's not enogh info to break down the production cost (industry data) but it's still possible to create a chart.
-  - Green: if the completeness in the grid is in green, it's possible to create a chart and break down the production cost (industry data).</br>
-- *Please view the backlog item to know more about it.*</br>
+  - Green: if the completeness in the grid is in green, it's possible to create a chart and break down the production cost (industry data).
+- *Please view the backlog item to know more about it.*
    - https://buynamics.visualstudio.com/VRS/_workitems/edit/5186
    - https://buynamics.visualstudio.com/WTP/_workitems/edit/2021
 ### Total product completeness in the product detail page
 - The completeness percentage is the same as the completeness percentage in the product list.
 ### Completeness percent in the product detail section
 - The section `1. Product detail` makes up `70 %` of the total product completeness.
-- Here are the detail percents of the section 1:</br>
+- Here are the detail percents of the section 1:
   | Field      | Percent |
   |------------|---------|
   | Country     |  10 %  | 
   | Industry    | 20 %  | 
   | Supplier    | 5  %  | 
   | Buying Price| 10 % |
-  | Annual Quantity| 10% |
+  | Annual Quantity    |    10% |
   | Tag| 1%|
   | Description| 1%|
   | Article Number| 5%|
   | Article no Supplier|1%|
   | Unit of Measure| 5%|
   | Image| 2%|
-  
-  
 
-- The percentage formulas: **`(Field (%) / 70 % )*100`**</br>
-For example, if country is filled, the percent of `1. Product detail` is (10/70)*100 ~ 14%, and the product total completeness is 10%.
+- The percentage formulas: **`(Field (%) / 70 % )*100`**
+- For example, if country is filled, the percent of `1. Product detail` is (10/70)*100 ~ 14%, and the product total completeness is 10%.
 - The color rule for this section:
    | Field      | Percent |
   |------------|---------|
@@ -135,13 +133,13 @@ For example, if country is filled, the percent of `1. Product detail` is (10/70)
 
 ### Completeness percent in the comnodity and component weight section
 - The section `2. Commodity and Component Weights` makes up `30 %` of the total product completeness.
-- Here are the detail percents of the section 2:</br>
+- Here are the detail percents of the section 2:
   | Field      | Percent |
   |------------|---------|
   | Commodity/ component     |  15 %  | 
   | Net Weight    | 15 %  |
-- The percentage formulas: **`(Field (%) / 30 % )*100`**</br>
-For example, if a commodity is added and no net weight is input, the percent of `2. Commodity and Component Weights` is (15/30)*100% = 50 %, and the product total completness is 15% (not include country).
+- The percentage formulas: **`(Field (%) / 30 % )*100`**
+- For example, if a commodity is added and no net weight is input, the percent of `2. Commodity and Component Weights` is (15/30)*100% = 50 %, and the product total completness is 15% (not include country).
 - The color rule for this section: the same as that for the section `1. Product detail`
 ## 🔑 **Product Performance**
 - Users have the possiblity to compare existing buying prices with theriotical WTP prices.
@@ -175,6 +173,6 @@ For example, if a commodity is added and no net weight is input, the percent of 
   - Compared products must be a `complete` product with buying prices and annual quantity >0.</br>
    How to calculate Weighted average buying price and Weighted average WTP cost price?</br>
    **Weighted average buying price:**</br>
-    It's defined as test
+    It's defined as the monthly price of the annual buying price of one or many products per month.
 
 
